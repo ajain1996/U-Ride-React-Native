@@ -1,20 +1,31 @@
+import React from 'react';
+import 'react-native-gesture-handler';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
+// import { OriginContextProvider, DestinationContextProvider } from './src/contexts/contexts';
+import RoootNavigator from './src/navigations/RootNavigator';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { colors } from './src/global/styles';
+import { DestinationContextProvider, OriginContextProvider } from './src/contexts/contexts';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar backgroundColor="#2058c0" style='light' />
+      <DestinationContextProvider>
+        <OriginContextProvider>
+          <RoootNavigator />
+        </OriginContextProvider>
+      </DestinationContextProvider>
     </View>
-  );
+  )
 }
+
+export default App
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    backgroundColor: colors.white,
+    paddingBottom: 30,
+  }
+})

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "uberclone",
+    "name": "U Ride",
     "slug": "uberclone",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -23,6 +21,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.ajain.aj1996.uberclone",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDk7cSQO8JE0YgoEyo50Py8ozZTuBCHtIg"
+        }
       }
     },
     "web": {
